@@ -1,0 +1,13 @@
+version: "3.5"
+
+services:
+  php:
+    image: hw20-php
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - "./xdebug_output:/xdebug_output"
+      - "./etc/php.ini:/usr/local/etc/php/php.ini"
+
+
